@@ -1,22 +1,37 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es6"],
+    "lib": [
+      "es6"
+    ],
+    "allowJs": true,
     "module": "commonjs",
     "rootDir": "src",
+    "outDir": "build",
     "baseUrl": "./",
     "paths": {
-      "@config/*": ["src/config/*"],
-      "@modules/*": ["src/modules/*"],
-      "@shared/*": ["src/shared/*"]
+      "@config/*": [
+        "/src/config/*"
+      ],
+      "@modules/*": [
+        "/src/modules/"
+      ],
+      "@shared/*": [
+        "/src/shared/"
+      ]
     },
+    "typeRoots": [
+      "@types",
+      "./node_modules/@types"
+    ],
     "resolveJsonModule": true,
-    "allowJs": true,
-    "outDir": "build",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictPropertyInitialization": false,
     "noImplicitAny": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
