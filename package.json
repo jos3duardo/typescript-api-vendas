@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "git@github.com:jos3duardo/typescript-api-vendas.git",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts"
+  },
   "devDependencies": {
     "@types/node": "^16.10.2",
     "ts-node-dev": "^1.1.8",
