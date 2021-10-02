@@ -4,5 +4,11 @@
   "post": 5432,
   "username": "postgres",
   "password": "postgres",
-  "database": "apivendas-v2"
+  "database": "apivendas-v2",
+  "migrations": [
+    "./src/shared/typeorm/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/shared/typeorm/migrations/"
+  }
 }
