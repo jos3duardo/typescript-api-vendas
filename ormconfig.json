@@ -1,8 +1,8 @@
 {
   "type": "postgres",
-  "host": "localhost",
+  "host": "192.168.0.181",
   "post": 5432,
   "username": "postgres",
   "password": "postgres",
-  "database": "apivendas-2"
+  "database": "apivendas-v2"
 }
