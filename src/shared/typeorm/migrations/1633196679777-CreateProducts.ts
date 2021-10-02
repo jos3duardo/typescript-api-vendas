@@ -15,28 +15,28 @@ export class CreateProducts1633196679777 implements MigrationInterface {
           },
           {
             name: 'name',
-            type: 'varchar'
+            type: 'varchar',
           },
           {
             name: 'price',
             type: 'decimal',
             precision: 10,
-            scale: 2
+            scale: 2,
           },
           {
             name: 'quantity',
-            type: 'int'
+            type: 'int',
           },
           {
             name: 'created_at',
             type: 'timestamp',
-            default: 'now()'
+            default: 'now()',
           },
           {
             name: 'updated_at',
             type: 'timestamp',
-            default: 'now()'
-          }
+            default: 'now()',
+          },
         ],
       }),
     )
