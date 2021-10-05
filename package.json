@@ -4,5 +4,26 @@
   "main": "index.js",
   "repository": "git@github.com:jos3duardo/typescript-api-vendas.git",
   "author": "jos3duardo <jos3duardolopes@gmail.com>",
-  "license": "MIT"
+  "scripts": {
+    "start": "node dist/shared/infra/http/server.js",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "test": "jest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-prettier": "3.2.0",
+    "prettier": "^2.4.1",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.4.3"
+  }
 }
