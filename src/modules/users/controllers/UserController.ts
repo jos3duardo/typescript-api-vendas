@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import ListUserService from '@modules/users/services/ListUserService';
-import CreateUserService from "@modules/users/services/CreateUserService";
+import CreateUserService from '@modules/users/services/CreateUserService';
 
 export default class UserController {
   public async index(request: Request, response: Response): Promise<Response> {
