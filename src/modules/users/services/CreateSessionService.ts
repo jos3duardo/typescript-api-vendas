@@ -4,6 +4,7 @@ import UsersRepository from '@modules/users/typeorm/repositories/UsersRepository
 import AppError from '@shared/errors/AppError';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
+import authConfig from '@config/auth';
 
 interface IRequest {
   email: string;
@@ -30,11 +31,10 @@ class CreateSessionService {
     if (!passwordConfirmed) {
       throw new AppError('Incorrect email/password combination.');
     }
-    const md5 = 'aa7d36132d7d93004719a74e4f389f93be4b40ff';
 
-    const token = sign({}, md5, {
+    const token = sign({}, authConfig.jwt.secret, {
       subject: user.id,
-      expiresIn: '1d',
+      expiresIn: authConfig.jwt.expiresIn,
     });
 
     return {
