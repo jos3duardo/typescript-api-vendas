@@ -1,6 +1,5 @@
 ## API de Gestão de Vendas
-[![wakatime](https://wakatime.com/badge/user/7e68e438-f1f7-4933-b9b7-f42aeb5c2a1b.svg)](https://wakatime.com/@7e68e438-f1f7-4933-b9b7-f42aeb5c2a1b)
-
+[![wakatime](https://wakatime.com/badge/user/7e68e438-f1f7-4933-b9b7-f42aeb5c2a1b/project/ea7ece28-b3f1-468f-9e99-e753da851870.svg)](https://wakatime.com/badge/user/7e68e438-f1f7-4933-b9b7-f42aeb5c2a1b/project/ea7ece28-b3f1-468f-9e99-e753da851870)
 ## Funcionalidades
 
 Cadastro de:
@@ -23,13 +22,13 @@ container do servidor redis
 docker run --name redis -p 6379:6379 -d -t redis:alpine
 ```
 
-Usando RedisInsight  como cliente redis  
+Usando RedisInsight  como cliente redis
 container do cliente redis
 ```bash
 docker run --name redis-client -v redisinsight:/db -p 8001:8001 -d -t redislabs/redisinsight:latest
 ```
 
-depois de rodar esse comando o cliente redis fica disponivel nesta rota  
+depois de rodar esse comando o cliente redis fica disponivel nesta rota
 [http://localhost:8001](http://localhost:8001/)
 
 Generating a UUID in Postgres for Insert statement
