@@ -20,7 +20,6 @@ class CreateSessionService {
     const user = await usersRepository.findByEmail(email);
 
     if (!user) {
-      console.log(user);
       throw new AppError('Incorrect email/password combination.');
     }
 
