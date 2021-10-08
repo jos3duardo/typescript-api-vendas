@@ -36,6 +36,6 @@ app.use(
   },
 );
 
-app.listen(3331, () => {
+app.listen(3333, () => {
   console.log('servidor rodando');
 });
