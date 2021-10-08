@@ -10,6 +10,7 @@ routes.use('/sessions', sessionRoutes);
 routes.use('/products', productsRoutes);
 routes.use('/users', usersRoutes);
 routes.use('/password', passwordRouter);
+routes.use('/reset', passwordRouter);
 
 routes.get('/', (request, response) => {
   return response.json({ message: 'api online!' });
