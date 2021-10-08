@@ -33,9 +33,8 @@ class ResetPasswordService {
     if (isAfter(Date.now(), compareDate)) {
       throw new AppError('Token expired');
     }
-    const passwordHas = await hash(password, 8);
 
-    user.password = passwordHas;
+    user.password = await hash(password, 8);
 
     await usersRepository.save(user);
   }
